@@ -234,4 +234,5 @@ with r3:
     st.write("#### 🏆 Moneyline (H2H)")
     prob_home_win = norm.cdf(proj_margin / spread_sigma)
     prob_away_win = 1.0 - prob_home_win
-    ev_home_ml = (prob_home_win * odds_home_ml) -
+    ev_home_ml = (prob_home_win * odds_home_ml) - 1.0
+    ev_away_ml = (prob_away_win * odds_away_ml) - 1.0
